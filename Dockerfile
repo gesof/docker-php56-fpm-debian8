@@ -52,5 +52,5 @@ EXPOSE 9000
 # Pull and Run
 # t=iordachej/docker-php56-fpm-debian8:latest && sudo docker pull $t && sudo docker run -it --ipc=host --gpus all $t
 
-#docker run -d --name php56-fpm -p 9001:9000 --mount type=bind,source="$PWD",target="$PWD" -v "$PWD/php-fpm.ini":/etc/php5/fpm/php.ini -v "$PWD/php-cli.ini":/etc/php5/cli/php.ini gesof/docker-php56-fpm-debian8
+#docker run -d --name php56-fpm -p 9001:9000 --mount type=bind,source="$PWD/..",target="$PWD/.." -v "$PWD/php-fpm.ini":/etc/php5/fpm/php.ini -v "$PWD/php-cli.ini":/etc/php5/cli/php.ini iordachej/docker-php56-fpm-debian8
 
