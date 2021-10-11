@@ -47,10 +47,10 @@ CMD /usr/sbin/php5-fpm -F -O 2>&1 | sed -u 's,.*: \"\(.*\)$,\1,'| sed -u 's,"$,,
 EXPOSE 9000
 
 # Build and Push
-# t=gesof/docker-php56-fpm-debian8:latest && sudo docker build -t $t . && sudo docker push $t
+# t= iordachej/docker-php56-fpm-debian8:latest && sudo docker build -t $t . && sudo docker push $t
 
 # Pull and Run
-# t=gesof/docker-php56-fpm-debian8:latest && sudo docker pull $t && sudo docker run -it --ipc=host --gpus all $t
+# t=iordachej/docker-php56-fpm-debian8:latest && sudo docker pull $t && sudo docker run -it --ipc=host --gpus all $t
 
 #docker run -d --name php56-fpm -p 9001:9000 --mount type=bind,source="$PWD",target="$PWD" -v "$PWD/php-fpm.ini":/etc/php5/fpm/php.ini -v "$PWD/php-cli.ini":/etc/php5/cli/php.ini gesof/docker-php56-fpm-debian8
 

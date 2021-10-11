@@ -4,11 +4,13 @@ services:
     container_name: php56-fpm
     ports:
       - 9001:9000
-    image: iordachej/php56-fpm
+    image: iordachej/docker-php56-fpm-debian8:latest
     environment:
-      SERVER_NAME: localserver.juristoffice.lh
+      SERVER_NAME: localserver.lh
     volumes:
-      - phpdata:/var/www
+      - phpdata:$PWD/
+      - ./php-fpm.ini:/etc/php5/fpm/php.ini
+      - ./php-cli.ini:/etc/php5/cli/php.ini
     networks:
       - localnet
 
