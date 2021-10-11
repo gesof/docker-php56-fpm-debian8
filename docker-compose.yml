@@ -7,10 +7,8 @@ services:
     image: iordachej/php56-fpm
     environment:
       SERVER_NAME: localserver.juristoffice.lh
-      MYSQL_SOCKET: /tmp/mysql.sock
-      MYSQLI_SOCKET: /tmp/mysql.sock
     volumes:
-      - phpdata:/Users/alexjorj/yp/localserver.juristoffice.ro
+      - phpdata:/var/www
     networks:
       - localnet
 
